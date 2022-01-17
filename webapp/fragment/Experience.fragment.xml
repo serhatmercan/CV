@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns="sap.suite.ui.commons" xmlns:core="sap.ui.core" xmlns:m="sap.m">
+	<ProcessFlow id="idPFExperience" nodes="{CV>/Experience/Details}" lanes="{CV>/Experience/Positions}" scrollable="false"
+		wheelZoomable="false">
+		<nodes>
+			<ProcessFlowNode children="{CV>Children}" laneId="{CV>Lane}" nodeId="{CV>ID}">
+				<zoomLevelOneContent>
+					<m:VBox height="100%" justifyContent="SpaceAround" renderType="Bare">
+						<m:Text text="{CV>Position}"/>
+						<m:Image src="{CV>Photo}"/>
+						<m:Text text="{CV>Role}"/>
+					</m:VBox>
+				</zoomLevelOneContent>
+				<zoomLevelTwoContent>
+					<m:VBox height="100%" justifyContent="SpaceAround" renderType="Bare">
+						<m:Text text="{CV>Position}"/>
+						<m:Image src="{CV>Photo}"/>
+						<m:Text text="{CV>Role}"/>
+					</m:VBox>
+				</zoomLevelTwoContent>
+				<zoomLevelThreeContent>
+					<m:VBox height="100%" justifyContent="SpaceAround" renderType="Bare">
+						<m:Text text="{CV>Position}"/>
+						<m:Image src="{CV>Photo}"/>
+						<m:Text text="{CV>Role}"/>
+					</m:VBox>
+				</zoomLevelThreeContent>
+				<zoomLevelFourContent>
+					<m:Text text="{CV>Position}"/>
+					<m:Image src="{CV>Photo}"/>
+					<m:Text text="{CV>Role}"/>
+				</zoomLevelFourContent>
+			</ProcessFlowNode>
+		</nodes>
+		<lanes>
+			<ProcessFlowLaneHeader iconSrc="sap-icon://employee" laneId="{CV>ID}" position="{CV>Position}" text="{CV>Date}"/>
+		</lanes>
+	</ProcessFlow>
+</core:FragmentDefinition>

@@ -1,0 +1,108 @@
+<mvc:View controllerName="com.sm.CV.controller.Main" xmlns="sap.uxap" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m">
+	<m:App id="app">
+		<m:pages>
+			<ObjectPageLayout showTitleInHeaderContent="true">
+				<headerTitle>
+					<ObjectPageDynamicHeaderTitle>
+						<expandedHeading>
+							<m:HBox>
+								<m:Title text="{CV>/Name}" wrapping="true"/>
+								<m:ObjectMarker type="Favorite" class="sapUiTinyMarginBegin"/>
+							</m:HBox>
+						</expandedHeading>
+						<snappedHeading>
+							<m:FlexBox fitContainer="true" alignItems="Center">
+								<m:Avatar src="{CV>/Photo}" class="sapUiTinyMarginEnd"/>
+								<m:Title text="{CV>/Name}" wrapping="true"/>
+							</m:FlexBox>
+						</snappedHeading>
+						<expandedContent>
+							<m:Text text="{CV>/Title}"/>
+						</expandedContent>
+						<snappedContent>
+							<m:Text text="{CV>/Title}"/>
+						</snappedContent>
+					</ObjectPageDynamicHeaderTitle>
+				</headerTitle>
+				<headerContent>
+					<m:FlexBox wrap="Wrap">
+						<m:Avatar class="sapUiSmallMarginEnd" src="{CV>/Photo}" displaySize="L"/>
+						<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+							<m:Label text="{CV>/Description}"/>
+							<m:Label text="{CV>/Location}"/>
+						</layout:VerticalLayout>
+						<layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+							<m:Link text="{CV>/Phone}"/>
+							<m:Link text="{CV>/Mail}"/>
+						</layout:VerticalLayout>
+						<layout:HorizontalLayout class="sapUiSmallMarginBeginEnd ">
+							<m:Image src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" height="2rem"
+								press="onPressLinkedin"/>
+							<m:Image src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="2rem" press="onPressGitHub"/>
+						</layout:HorizontalLayout>
+					</m:FlexBox>
+				</headerContent>
+				<sections>
+					<ObjectPageSection title="Summary" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<core:Fragment fragmentName="com.sm.CV.fragment.Summary" type="XML"/>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					<ObjectPageSection title="Education" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<core:Fragment fragmentName="com.sm.CV.fragment.Education" type="XML"/>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					<ObjectPageSection title="Experience" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<core:Fragment fragmentName="com.sm.CV.fragment.Experience" type="XML"/>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					<ObjectPageSection title="Language" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<core:Fragment fragmentName="com.sm.CV.fragment.Language" type="XML"/>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					<ObjectPageSection title="Project" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<core:Fragment fragmentName="com.sm.CV.fragment.Project" type="XML"/>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					<ObjectPageSection title="Skills" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<core:Fragment fragmentName="com.sm.CV.fragment.Skills" type="XML"/>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					<ObjectPageSection title="Certifications" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<core:Fragment fragmentName="com.sm.CV.fragment.Certifications" type="XML"/>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					<ObjectPageSection title="Applications" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<core:Fragment fragmentName="com.sm.CV.fragment.Applications" type="XML"/>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+				</sections>
+				<footer></footer>
+			</ObjectPageLayout>
+		</m:pages>
+	</m:App>
+</mvc:View>

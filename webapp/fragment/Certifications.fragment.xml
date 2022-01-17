@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<l:HorizontalLayout content="{CV>/Certifications}" allowWrapping="true" class="sapUiTinyMarginTopBottom">
+		<GenericTile header="{CV>Certification}" subheader="{CV>Date}" press="onPressGT">
+			<TileContent >
+				<ImageContent src="{CV>Logo}"/>
+			</TileContent>
+		</GenericTile>
+	</l:HorizontalLayout>
+</core:FragmentDefinition>
